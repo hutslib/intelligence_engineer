@@ -75,7 +75,7 @@ class PathPlanner:
             if idx == len(pts) - 2:
                 for i in range(n_spline + 1):
                     t = 1. * i / n_spline
-                    p = ((1-t)**2)*pts[idx] + 2*t*(1-t)*last_m2 + (t**2)*pts[idx+1]
+                    p = ((1-t)**2)*pts[idx] + 2*t*(1-t)*m2 + (t**2)*pts[idx+1]
                     new_pts.append(p)
 
             last_m2 = m2
